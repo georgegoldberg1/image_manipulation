@@ -1,7 +1,7 @@
 #conda env create -f environment.yml
 #conda environment for python
 
-name: env_pymc
+name: image_env
 channels:
     - conda-forge
     - defaults
