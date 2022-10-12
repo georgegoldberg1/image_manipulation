@@ -1,0 +1,74 @@
+#conda env create -f environment.yml
+#conda environment for python
+
+name: env_pymc
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.10
+    - pip
+    - jupyter
+#
+#    #ReadingData
+#    - lxml
+#    - xlrd
+#    - xlsxwriter
+#    - fastparquet
+#    - pyarrow
+#
+#    #WebScraping
+#    - requests
+#    - beautifulsoup4
+
+    #DataScience
+    - numpy
+    - pandas
+    - scipy
+#    - statsmodels
+    - scikit-learn
+#    - nltk
+#
+#    #BayesianModelling
+#    - pymc3
+#    - arviz
+    
+    #DataViz
+    - matplotlib
+    - seaborn
+    - plotly
+    - dash
+
+    #AppBased
+    - pip:
+        - jupyter-dash
+    - flask
+
+    #Powerpoint
+    - pip:
+        - python-pptx
+
+
+    #Image specific
+    - pillow
+    - mahotas
+    - scikit-image
+    - opencv
+    - pycairo
+    - pip:
+        - SimpleITK
+    
+
+#pycairo - vectorgraphics
+#pgmagick - image processing reading writing in formats
+#simpleITK - suite of tools
+#mahotas -computer vision image processing - filters, morphology, point detect etc
+#simplyCV -framework to build computer vision apps has OpenCV under the hood without extensive know-how (bit depth, formats, color spaces)
+#OpenCV-Python -widely used. API for intensive computer vision programs.
+#PIL/Pillow (python Imaging Library) - decent but OLD. no dev since 2009? Pillow is the active Fork of PIL. 
+#SciPy - some capabilities built in such as gaussian blur
+#NumPy - can use it to change pixels and manipulate it using slicing and indexing etc
+#Scikit-Image 
+
+#to refresh the packages in this environment, run :
+#conda env update --prefix ./env --file environment.yml  --prune
