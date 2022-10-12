@@ -2,7 +2,10 @@
 
 from PIL import Image
 
-def load_image(file:str, img_folder='photos/'):
+def load_image(
+    file:str, 
+    img_folder:str='photos/'
+):
     """Takes a filename (with extension) and returns the image data
 
     Args:
@@ -10,7 +13,7 @@ def load_image(file:str, img_folder='photos/'):
         img_folder (str, optional): _description_. Defaults to 'photos'.
 
     Returns:
-        imagedata
+        imagedata: desc
     """
     if file.startswith(img_folder):
         im = Image.open(file)
